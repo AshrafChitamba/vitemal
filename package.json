@@ -1,0 +1,25 @@
+{
+  "name": "@nestjs/vitemail",
+  "version": "1.0.0",
+  "description": "A library to simplify the logic of sending emails",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "npm run start:vitemo",
+    "prepublish": "npm run build",
+    "build": "rimraf dist && tsc"
+  },
+  "author": "Ashraf Chitambaa",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^9.4.0",
+    "nodemailer": "^6.9.1",
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.1",
+    "@types/nodemailer": "^6.4.7",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
+  }
+}
