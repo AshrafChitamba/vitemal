@@ -36,8 +36,8 @@ let ViteMailService = class ViteMailService {
                 service: 'gmail',
                 port: 587,
                 auth: {
-                    user: 'changemotivecom@gmail.com',
-                    pass: 'infbvuaxputccvca',
+                    user: this.vitemailConfig.email,
+                    pass: this.vitemailConfig.password,
                 },
                 secure: false,
             });

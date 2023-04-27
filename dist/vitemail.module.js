@@ -28,6 +28,7 @@ let ViteMailModule = ViteMailModule_1 = class ViteMailModule {
     }
 };
 ViteMailModule = ViteMailModule_1 = __decorate([
+    (0, common_1.Global)(),
     (0, common_1.Module)({})
 ], ViteMailModule);
 exports.ViteMailModule = ViteMailModule;
