@@ -19,27 +19,31 @@ let ViteMailService = class ViteMailService {
     constructor(vitemailConfig) {
         this.vitemailConfig = vitemailConfig;
     }
-    /** The actual function which sends the email */
-    sendEmail(/** The email details you want to send */ emailDetails) {
+    /**
+     * This function will trigger the sending of the email provided that you pass the right info
+     */
+    sendEmail(
+    /** The email details you want to send */ emailDetails) {
         try {
             // keeping it simple without any template
             const mailOptions = {
                 to: emailDetails.to,
-                from: 'ashrafchitambaa3@gmail.com',
-                // replyTo: ,
+                from: "ashrafchitambaa3@gmail.com",
+                replyTo: emailDetails.replyTo,
                 subject: emailDetails.subject,
-                // sender: ,
-                text: 'Notification',
+                sender: emailDetails.sender,
+                text: "Notification",
                 html: `Hello <strong>${emailDetails.receiver}</strong>,  ${emailDetails.message}`,
             };
             const transporter = (0, nodemailer_1.createTransport)({
-                service: 'gmail',
+                service: "gmail",
                 port: 587,
                 auth: {
                     user: this.vitemailConfig.email,
                     pass: this.vitemailConfig.password,
                 },
                 secure: false,
+                connectionTimeout: 3000,
             });
             // sending the email
             return new Promise((resolve, reject) => {
@@ -57,7 +61,7 @@ let ViteMailService = class ViteMailService {
 };
 ViteMailService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, common_1.Inject)('VITEMAIL_OPTIONS')),
+    __param(0, (0, common_1.Inject)("VITEMAIL_OPTIONS")),
     __metadata("design:paramtypes", [Object])
 ], ViteMailService);
 exports.ViteMailService = ViteMailService;

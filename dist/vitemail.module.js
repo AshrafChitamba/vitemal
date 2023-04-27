@@ -11,14 +11,20 @@ exports.ViteMailModule = void 0;
 const common_1 = require("@nestjs/common");
 const vitemail_service_1 = require("./vitemail.service");
 let ViteMailModule = ViteMailModule_1 = class ViteMailModule {
-    /** You need to register your account to vitemail */
+    /** You need to register your google
+     * account to vitemail together with
+     * the app password you will be given
+     * and make sure you put them in an
+     * env file for security
+     */
     static register(
-    /** Email and app password for google accounts */ options) {
+    /** An object with valid email and password */
+    options) {
         return {
             module: ViteMailModule_1,
             providers: [
                 {
-                    provide: 'VITEMAIL_OPTIONS',
+                    provide: "VITEMAIL_OPTIONS",
                     useValue: options,
                 },
                 vitemail_service_1.ViteMailService,
