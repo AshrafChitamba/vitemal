@@ -1,6 +1,7 @@
 import { Module, DynamicModule, Global } from "@nestjs/common";
 import { ConfigOptionsDto } from "./dto/config-options.dto";
 import { ViteMailService } from "./vitemail.service";
+
 @Global()
 @Module({})
 export class ViteMailModule {

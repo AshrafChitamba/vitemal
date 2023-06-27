@@ -24,12 +24,10 @@ export class ViteMailService {
       // keeping it simple without any template
       const mailOptions: SendMailOptions = {
         to: emailDetails.to,
-        from: "ashrafchitambaa3@gmail.com",
+        from: this.vitemailConfig.email,
         replyTo: emailDetails.replyTo,
         subject: emailDetails.subject,
         sender: emailDetails.sender,
-        text: "Notification",
-
         html: `Hello <strong>${emailDetails.receiver}</strong>,  ${emailDetails.message}`,
       };
 
