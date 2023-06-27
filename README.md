@@ -14,12 +14,13 @@
  npm i vitemail
 ```
 
-<a id="module"></a>
-
 ### Usage
 
-1. Module Configuration
-In your app.module.ts provide your auth details to the provider
+<a id="module"></a>
+
+1. **_Module Configuration_**
+
+In your module file where you want to use it, provide your auth details to the **_authProvider method_**.
 
 ```javascript
 import { ViteMailModule } from "vitemail";
@@ -35,11 +36,24 @@ import { ViteMailModule } from "vitemail";
 export class AppModule {}
 ```
 
-1. Module Configuration
-In your app.module.ts provide your auth details to the provider
+<a id="service"></a>
+
+2. **_Service Configuration_**
+
+In your service file where you want to use it.
 
 ```javascript
 import { ViteMailService } from "vitemail";
+```
 
+<a id="type"></a>
 
+2. **_Types example_**
+
+```javascript
+import { VitemailOptions } from "vitemail";
+
+const options: VitemailOptions = {
+    
+}
 ```
