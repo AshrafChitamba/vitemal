@@ -6,7 +6,7 @@ import {
   createTransport,
 } from "nodemailer";
 import { ConfigOptionsDto } from "./dto/config-options.dto";
-import { VitemailOptions } from "./Types/vitemail";
+import { VitemailOptions } from "./types/vitemail";
 
 @Injectable()
 export class ViteMailService {
