@@ -48,12 +48,12 @@ import { ViteMailService } from "vitemail";
 
 <a id="type"></a>
 
-2. **_Types example_**
+3. **_Types example_**
 
 ```javascript
 import { VitemailOptions } from "vitemail";
 
 const options: VitemailOptions = {
-    
+
 }
 ```

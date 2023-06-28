@@ -23,12 +23,13 @@ export class ViteMailService {
     try {
       // keeping it simple without any template
       const mailOptions: SendMailOptions = {
-        to: emailDetails.to,
-        from: this.vitemailConfig.email,
+        to: emailDetails.receiver.email,
+        from: emailDetails.sender.email,
         replyTo: emailDetails.replyTo,
         subject: emailDetails.subject,
-        sender: emailDetails.sender,
-        html: `Hello <strong>${emailDetails.receiver}</strong>,  ${emailDetails.message}`,
+        sender: emailDetails.sender.email,
+        cc: emailDetails.cc,
+        html: `Hello <strong>${emailDetails.receiver.name}</strong>,  ${emailDetails.message}`,
       };
 
       const transporter: Transporter = createTransport({
