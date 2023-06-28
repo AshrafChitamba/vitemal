@@ -1,6 +1,10 @@
 {
   "name": "vitemail",
-  "version": "1.6.2",
+  "version": "1.9.3",
+  "repository": {
+    "url": "https://github.com/Bsc-40-20/vitemal"
+  },
+  "homepage": "https://github.com/Bsc-40-20/vitemal",
   "description": "A library to simplify the logic of sending emails",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,14 +12,13 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build"
   },
   "author": "Ashraf Chitambaa",
   "license": "ISC",
   "dependencies": {
     "@nestjs/common": "^9.4.0",
-    "dist": "^0.1.2",
     "nodemailer": "^6.9.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0"
